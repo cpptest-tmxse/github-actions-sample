@@ -42,3 +42,8 @@ void clearAllCache()
     clearCache(0, CACHE_SIZE /* -1 */ ); /* Uncomment to fix accessing out of bounds */
 }
 
+void util_func(int a, int b)
+{
+    return a + b;
+}
+
