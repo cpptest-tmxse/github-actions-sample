@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dbutil.h"
+#include <stdint.h>
 
 #define CACHE_SIZE 1000
+
+int32_t util_func(int32_t a, int32_t b);
 
 Person* cache[CACHE_SIZE];
 
@@ -40,5 +43,10 @@ void clearCache(int from_id, int to_id)
 void clearAllCache()
 {
     clearCache(0, CACHE_SIZE /* -1 */ ); /* Uncomment to fix accessing out of bounds */
+}
+
+int32_t util_func(int32_t a, int32_t b)
+{
+    return a + b;
 }
 
